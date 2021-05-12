@@ -1,11 +1,7 @@
-const Pool = require('pg').Pool;
+const { Client } = require('pg');
+const DATABASE_URL =
+    process.env.DATABASE_URL || 'postgres://localhost:5432/admin_panel';
+const client = new Client(DATABASE_URL);
+client.connect();
 
-const pool = new Pool({
-    user: 'postgres',
-    password: 'copper12',
-    host: 'localhost',
-    port: 5421,
-    database: 'admin_panel',
-});
-
-module.exports = pool;
+module.exports = client;

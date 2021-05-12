@@ -5,7 +5,7 @@ CREATE TABLE users(
     firstName VARCHAR(255) NOT NULL,
     lastName VARCHAR(255) NOT NULL,
     email VARCHAR(255) UNIQUE NOT NULL,
-    role VARCHAR(255) NOT NULL
+    userRole VARCHAR(255) NOT NULL
 )
 
 CREATE TABLE classes(
